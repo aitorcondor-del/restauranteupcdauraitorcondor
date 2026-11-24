@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="description" content="Restaurante UPCDAUR: alta cocina, reservas en línea y pedidos de platos.">
+    <link rel="icon" href="img.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante UPCDAUR - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="img.png" alt="Logo Restaurante UPCDAUR" class="logo">
+        <h1>Restaurante UPCDAUR</h1>
+        <p>Alta cocina y tradición en cada plato</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contactos.html">Contactos</a>
+    </nav>
+
+    <main>
+        <section id="bienvenidos">
+            <h2>Bienvenidos a UPCDAUR</h2>
+            <p>Disfruta de una experiencia gastronómica única con ingredientes frescos y recetas exclusivas preparadas por nuestros chefs.</p>
+            <video controls class="video-promo">
+                <source src="pon.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </section>
+<section id="zonaCuenta">
+    <h2>Mi cuenta</h2>
+    <input type="text" id="cuUsuario" placeholder="Usuario">
+    <input type="password" id="cuClave" placeholder="Contraseña">
+    <button id="btnRegistro">Crear cuenta</button>
+    <button id="btnEntrar">Iniciar sesión</button>
+    <button id="btnSalir">Cerrar sesión</button>
+    <p id="mensajeCuenta"></p>
+    <p id="estadoSesion">Sin sesión.</p>
+    <h3>Mis pedidos</h3>
+    <ul id="listaPedidos"></ul>
+</section>
+        <section id="menu">
+            <h2>Nuestro Producto Destacado</h2>
+            <div class="producto-destacado">
+                <img src="listacatalogo/plato1.png" alt="Plato destacado" class="img-destacada">
+                <p>Especialidad de la casa preparada al momento con selección gourmet.</p>
+                
+                <div class="like-container">
+                    <button id="btnLike" class="btn-like">🤍 Me gusta</button>
+                    <span id="contadorLikes">0</span> Me gusta
+                </div>
+            </div>
+
+            <button id="btnCatalogo" class="btn-principal">Ver catálogo</button>
+            <div id="contenedorCatalogo" class="catalogo-grid"></div>
+        </section>
+
+        <section id="reservas">
+            <h2>Haz tu Reserva</h2>
+            <form id="formReserva" class="formulario">
+                <div class="campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha de reserva:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora" required>
+                </div>
+
+                <div class="campo">
+                    <label for="personas">Número de personas:</label>
+                    <input type="number" id="personas" name="personas" min="1" max="20" value="2" required>
+                </div>
+
+                <button type="submit" class="btn-principal">Confirmar Reserva</button>
+                <p id="mensajeReserva" class="mensaje-estado"></p>
+            </form>
+        </section>
+         <section>
+    <h2>Mi tienda</h2>
+    <input type="text" id="campoBuscar" placeholder="Buscar producto">
+    <select id="selCategoria">
+        <option value="todas">Todas las categorías</option>
+        <option value="Carnes">Carnes</option>
+        <option value="Mariscos">Mariscos</option>
+        <option value="Postres">Postres</option>
+        <option value="Pastas">Pastas</option>
+        <option value="Entradas">Entradas</option>
+    </select>
+    <button id="btnFiltrar">Buscar</button>
+    <ul id="listaProductos"></ul>
+
+    <h3>Mi carrito</h3>
+    <p id="textoCarrito">El carrito está vacío.</p>
+    <button id="btnVaciar">Vaciar carrito</button>
+    <button id="btnComprar">Finalizar compra</button>
+<p id="mensajeCompra"></p>
+</section>
+    <section>
+    <h4>Calculadora de total</h4>
+
+    <input type="text" id="campoPrecio" placeholder="Precio">
+
+    <input type="text" id="campoCantidad" placeholder="Cantidad">
+
+    <button id="btnTotal">Calcular</button>
+
+    <p id="resultadoTotal"></p>
+
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Restaurante UPCDAUR.</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
